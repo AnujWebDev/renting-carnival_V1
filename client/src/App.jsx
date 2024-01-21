@@ -32,6 +32,7 @@ import AllProductsAdmin from "./admin/AllProductsAdmin";
 import AllOrders from "./admin/AllOrders";
 import ShowPackages from "./admin/ShowPackage";
 import ProductForm from "./component/CreateProduct/ProductForm";
+import BlogForm from "./component/CreateBlog/BlogForm";
 // import ProductForm from "./component/ProductForm";
 
 function App() {
@@ -117,6 +118,7 @@ function App() {
           <Route path="/allUsers" element={<AllUsers />} />
 
           <Route path="/product/create" element={<ProductForm />} />
+          <Route path="/blog/create" element={<BlogForm />} />
         </Routes>
       </BrowserRouter>
     </>

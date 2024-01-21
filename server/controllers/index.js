@@ -9,5 +9,6 @@ module.exports.profileController = require("./profileController");
 module.exports.packageController = require("./packageController");
 module.exports.adminController = require("./adminController");
 module.exports.paymentController = require("./paymentController");
+module.exports.blogController = require("./blogController")
 module.exports.orderController = require("./orderController");
 module.exports.stripeWebhookController = require("./stripeWebhookController")

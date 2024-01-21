@@ -18,11 +18,11 @@ const BlogForm = () => {
     });
   }, []);
 
-  const [sendImages, setSendImages] = useState(Array(5).fill(null));
-  const [imagePreviews, setImagePreviews] = useState(Array(5).fill(null));
+  const [sendImages, setSendImages] = useState(Array(2).fill(null));
+  const [imagePreviews, setImagePreviews] = useState(Array(2).fill(null));
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("")
-  const [date , setDate] = useState("")
+  const [date, setDate] = useState("")
 
   const handleSendImage = (e, index) => {
     const newSendImages = [...sendImages];
@@ -61,9 +61,9 @@ const BlogForm = () => {
 
     const fd = new FormData();
     fd.append("title", title);
-   
+
     fd.append("description", description);
-    fd.append("date" , date)
+    fd.append("date", date)
 
     sendImages.forEach((image, index) => {
       if (image) {
@@ -125,7 +125,7 @@ const BlogForm = () => {
                 id="title"
                 name="title"
                 value={title}
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setTitle(e.target.value)}
                 className="form-input mt-1 block w-full"
                 required
               />
@@ -153,14 +153,14 @@ const BlogForm = () => {
                 htmlFor="category"
                 className="block text-sm font-medium text-gray-600"
               >
-                Date : 
+                Date :
               </label>
               <input
                 type="date"
                 id="date"
                 name="date"
                 value={date}
-                onChange={(e) => setCategory(e.target.value)}
+                onChange={(e) => setDate(e.target.value)}
                 className="form-input mt-1 block w-full"
                 required
               />
@@ -172,7 +172,7 @@ const BlogForm = () => {
               htmlFor="photos"
               className="block text-sm font-medium text-gray-600"
             >
-              Upload Photos of Product (up to 5 images):
+              Upload Photos of Product (up to 2 images):
             </label>
 
             <div className="flex flex-wrap">
